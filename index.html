@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+ <head>
+  <title>vis.js Graph demo</title>
+  <script src="vis.min.js"></script>
+  <link href="vis.min.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+      #graph {
+        width: 640px;
+        height: 400px
+      }
+  </style>
+ </head>
+
+ <body>
+ <div id="graph"></div> 
+  <script type="text/javascript">
+
+   var options = {
+        autoResize: true,
+        height: '100%',
+        width: '100%'
+    }
+    
+   
+
+   var nodes = [
+    {id: 1, label: 'instancia 1'}, 
+    {id: 2, label: 'instancia 2'}, 
+    {id: 3, label: 'ALB'},
+    {id: 4, label: 'Internet'}
+   ];
+
+   var edges = [
+    {from: 1, to: 3},
+    {from: 2, to: 3},
+    {from: 3, to: 4},
+   ];
+
+   var container = document.getElementById('graph');
+
+   var data = {
+    nodes: nodes,
+    edges: edges,
+   };
+
+   var graph = new vis.Network(container, data, options);
+   //var graph = new vis.Network(container, data, {});
+
+  </script>
+ </body>
+</html>
