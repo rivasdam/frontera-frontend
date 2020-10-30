@@ -1,0 +1,13 @@
+{
+    "nodes":[
+          {"name":"internet","group":1},
+          {"name":"loadbalancer","group":2},
+          {"name":"instancia1","group":3},
+          {"name":"instancia2","group":3}
+      ],
+      "links":[
+        {"source":0,"target":1,"weight":3}, 
+        {"source":2,"target":1,"weight":1},
+        {"source":3,"target":1,"weight":1}
+      ]
+}
