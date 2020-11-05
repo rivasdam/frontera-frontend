@@ -101,8 +101,10 @@ secretsEncryption:
   keyARN: ${MASTER_ARN}
 EOF
 
+echo "Creating EKS Cluster"
 eksctl create cluster -f eksworkshop.yaml
 
-
+echo "Helm installation"
+curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
 
